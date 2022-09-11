@@ -1,0 +1,22 @@
+.go-cache:
+  variables:
+    GOPATH: $CI_PROJECT_DIR/.go
+  before_script:
+    - mkdir -p .go
+  cache:
+    key: golang-mod-cache
+    paths:
+      - .go/pkg/mod/
+
+test-modelx:
+  variables:
+    MARIADB_DATABASE: strapi
+    MARIADB_ROOT_PASSWORD: root
+  stage: test
+  extends: .go-cache
+  services:
+    - mariadb:10.3
+  image: golang:1.19-buster
+  script:
+    - sleep 10
+    - cd predict/modelx && go test -race -cover -timeout 300s -tags modelx_integration -covermode=atomic -count=1 ./...

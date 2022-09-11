@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: strapi-server
+  labels:
+    app: strapi-server
+spec:
+  selector:
+    matchLabels:
+      app: strapi-server
+  template:
+    metadata:
+      labels:
+        app: strapi-server
+    spec:
+      containers:
+        - name: strapi-server
+          resources:
+            requests:
+              cpu: 100m
+              memory: 200M
+            limits:
+              cpu: 800m
+              memory: 1Gi
+          image: strapi-server
+          env:
+            - name: DATABASE_CLIENT
+              value: "mysql"
+            - name: DATABASE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mariadb-secret
+                  key: mariadb-root-password
+            - name: DATABASE_NAME
+              value: "strapi"
+            - name: DATABASE_HOST
+              value: "mariadb"
+            - name: DATABASE_PORT
+              value: "3306"
+            - name: DATABASE_USERNAME
+              value: "root"

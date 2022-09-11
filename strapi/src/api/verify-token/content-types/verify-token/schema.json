@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "verify_tokens",
+  "info": {
+    "singularName": "verify-token",
+    "pluralName": "verify-tokens",
+    "displayName": "verify-token"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "confirmed": {
+      "type": "boolean"
+    }
+  }
+}

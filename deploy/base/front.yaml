@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front-server
+  labels:
+    app: front-server
+spec:
+  selector:
+    matchLabels:
+      app: front-server
+  template:
+    metadata:
+      labels:
+        app: front-server
+    spec:
+      containers:
+        - name: front-server
+          resources:
+            requests:
+              cpu: 100m
+              memory: 200M
+            limits:
+              cpu: 800m
+              memory: 1Gi
+          image: front-server

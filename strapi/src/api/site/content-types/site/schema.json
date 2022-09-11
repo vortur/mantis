@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sites",
+  "info": {
+    "singularName": "site",
+    "pluralName": "sites",
+    "displayName": "site"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "e_tag": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "user_id": {
+      "type": "biginteger"
+    },
+    "lat": {
+      "type": "float"
+    },
+    "lon": {
+      "type": "float"
+    },
+    "poly_id": {
+      "type": "biginteger"
+    },
+    "address_id": {
+      "type": "biginteger"
+    },
+    "site_details_id": {
+      "type": "biginteger"
+    }
+  }
+}

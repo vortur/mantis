@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "site_details",
+  "info": {
+    "singularName": "site-detail",
+    "pluralName": "site-details",
+    "displayName": "site_detail"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "e_tag": {
+      "type": "string"
+    },
+    "peak_power": {
+      "type": "biginteger"
+    },
+    "nominal_power": {
+      "type": "biginteger"
+    },
+    "efficiency": {
+      "type": "float"
+    }
+  }
+}

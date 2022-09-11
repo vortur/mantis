@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "energy_generation_forecasts",
+  "info": {
+    "singularName": "energy-generation-forecast",
+    "pluralName": "energy-generation-forecasts",
+    "displayName": "energy_generation_forecast"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "e_tag": {
+      "type": "string"
+    },
+    "poly_id": {
+      "type": "biginteger"
+    },
+    "from_time": {
+      "type": "datetime"
+    },
+    "to_time": {
+      "type": "datetime"
+    },
+    "energy": {
+      "type": "biginteger"
+    },
+    "model": {
+      "type": "string"
+    }
+  }
+}

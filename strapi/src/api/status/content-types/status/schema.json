@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "statuses",
+  "info": {
+    "singularName": "status",
+    "pluralName": "statuses",
+    "displayName": "status"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "e_tag": {
+      "type": "string"
+    },
+    "device_id": {
+      "type": "biginteger"
+    },
+    "status": {
+      "type": "string"
+    },
+    "status_description": {
+      "type": "string"
+    }
+  }
+}

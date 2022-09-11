@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "energy_generations",
+  "info": {
+    "singularName": "energy-generation",
+    "pluralName": "energy-generations",
+    "displayName": "energy_generation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "e_tag": {
+      "type": "string"
+    },
+    "from_time": {
+      "type": "datetime"
+    },
+    "to_time": {
+      "type": "datetime"
+    },
+    "site_id": {
+      "type": "biginteger"
+    },
+    "energy": {
+      "type": "integer"
+    }
+  }
+}

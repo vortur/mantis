@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: strapi-server
+spec:
+  selector:
+    app: strapi-server
+  ports:
+    - protocol: TCP
+      port: 1337
+      targetPort: 1337

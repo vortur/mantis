@@ -1,0 +1,17 @@
+body {
+    background-color: #000066;
+    font: 15px Arial, sans-serif;
+    margin: 1px;
+  }
+  
+  .pageTitleDiv {
+    color: #c8c9d6;
+    text-align: center;
+  }
+  .center {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    border: 3px solid #6666ff;
+    padding: 10px;
+  }

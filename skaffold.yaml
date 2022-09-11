@@ -1,0 +1,42 @@
+apiVersion: skaffold/v2beta29
+kind: Config
+metadata:
+  name: mantis
+portForward:
+  - resourceType: service
+    resourceName: mariadb
+    port: 3306
+    localPort: 3306
+  - resourceType: service
+    resourceName: rabbitmq
+    port: 15672
+    localPort: 15672
+  - resourceType: service
+    resourceName: strapi-server-dev
+    port: 1337
+    localPort: 1337
+build:
+  artifacts:
+    - image: strapi-server
+      docker:
+        dockerfile: strapi.dockerfile
+    - image: front-server
+      docker:
+        dockerfile: front.dockerfile
+deploy:
+  kustomize:
+    paths:
+      - deploy/overlays/dev
+profiles:
+  - name: dev
+    deploy:
+      kustomize:
+        paths:
+          - deploy/overlays/dev
+  - name: prod
+    deploy:
+      kustomize:
+        flags:
+          apply: ["use-context", "microk8s"]
+        paths:
+          - deploy/overlays/prod
